@@ -12,7 +12,7 @@ function FeaturedItem() {
                 {/* Inner White Box with Shadow */}
                 <div className="rounded-3xl bg-white p-8 shadow-inner transition duration-500 hover:scale-105 hover:shadow-2xl">
                     <div className="flex items-center">
-                        {/* Item Image with Hover Effect */}
+                        {/* Location Image with Hover Effect */}
                         <img
                             className="h-[300px] w-[450px] rounded-2xl object-cover shadow-md transition-transform duration-500 hover:rotate-3 hover:scale-110"
                             src="/images/Texarkana.jpg"
@@ -21,23 +21,22 @@ function FeaturedItem() {
                         
                         {/* TEXT */}
                         <div className="ml-8 w-1/2 space-y-6">
-                            {/* Item Title */}
+                            {/* Location Title */}
                             <h1 className="poppins-extrabold text-3xl text-darkblue drop-shadow-lg">Lake Texarkana</h1>
-                            {/* Item Details */}
+                            {/* RSVP Details */}
                             <p className="inter-regular text-lg text-gray-600">
                                 4 Going | 3 Unsure
                             </p>
-                            {/* Item Description */}
+                            {/* Picnic Description */}
                             <p className="inter-regular text-darkgreen">
                                 Time for a day of relaxation on the lake. Bring a floatie and a swimsuit!
                             </p>
                             
-                            {/* SELLING TYPE AND BUTTON */}
+                            {/* RSVP Status */}
                             <div className="flex justify-between items-center pt-4">
                                 <p className="poppins-bold text-2xl text-emerald-500">
                                     Going
                                 </p>
-                                {/* Flashy Glowing Button */}
                             </div>
                         </div>
                     </div>

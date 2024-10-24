@@ -21,7 +21,7 @@ function App() {
                         </>
                     } 
                 />
-                {/* Browse route displaying Navbar and BrowsePage */}
+                {/* Browse route displaying Navbar and specific page */}
                 <Route path="/map" element={<MapPage />} />
                 <Route path="/rsvp" element={<RSVPPage />} />
                 <Route path="/activity" element={<ActivityPage />} />

@@ -22,7 +22,7 @@ function Card(props) {
                             <p>Bringing: {props.bringing}</p>
                         </div>
 
-                        {/* Status and Button */}
+                        {/* Status */}
                         <div className="flex justify-between items-center">
                             {/* Status */}
                             <p className="inter-semibold text-sm text-emerald-500">
