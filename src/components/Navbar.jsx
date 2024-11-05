@@ -1,7 +1,7 @@
 import React from 'react';
 import { PiBellSimpleRinging } from 'react-icons/pi';
 import { VscAccount } from 'react-icons/vsc';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
     return (
