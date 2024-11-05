@@ -11,10 +11,10 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
+        setUser(user);  // Ensure 'user' state is updated
     });
     return unsubscribe;
-  }, []);
+}, []);
 
   const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
   const register = (email, password) => createUserWithEmailAndPassword(auth, email, password);

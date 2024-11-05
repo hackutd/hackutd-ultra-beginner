@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 
 function RegisterPage() {
@@ -7,13 +7,13 @@ function RegisterPage() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const { register } = useAuth();
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
             await register(email, password);
-            navigate('/test'); // Redirect to the main page after registration
+            navigate('/home');  // Redirect to home after registration
         } catch (error) {
             setError('This email is already registered. Please use a different email.');
         }

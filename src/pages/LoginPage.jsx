@@ -3,23 +3,23 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/authContext';
 
 function LoginPage() {
-    const { userLoggedIn, login } = useAuth();
+    const { user, login } = useAuth();  // Use 'user' instead of 'userLoggedIn'
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
     useEffect(() => {
-        if (userLoggedIn) {
-            navigate('/home'); // Redirect to home if already logged in
+        if (user) {  // Check if a user is logged in
+            navigate('/home'); // Redirect to home if logged in
         }
-    }, [userLoggedIn, navigate]);
+    }, [user, navigate]);  // 'user' state triggers navigation to /home
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             await login(email, password);
-            navigate('/home'); // Redirect to home after login
+            navigate('/home');  // Ensure you navigate to '/home' after login
         } catch (error) {
             setError('Invalid credentials, please try again.');
         }
