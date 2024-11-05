@@ -1,10 +1,26 @@
-import { useState } from 'react';
-import data from '../data/data.json';
+import { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebase/firebase';
 import Card from './Card';
 
 function Dashboard() {
-    // State to store items, initialized with data from JSON file
-    const [items, setItems] = useState(data);
+    const [items, setItems] = useState([]); // Empty array to hold Firebase data
+
+    // Function to fetch invitee data from Firestore
+    const fetchData = async () => {
+        try {
+            const querySnapshot = await getDocs(collection(db, "invitees"));
+            const dataArray = querySnapshot.docs.map(doc => doc.data());
+            setItems(dataArray); // Set the state with the data from Firestore
+        } catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    };
+
+    // UseEffect to call fetchData when component loads
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     return (
         <div className="relative my-12 flex flex-col items-center">
@@ -24,7 +40,6 @@ function Dashboard() {
                         key={index}
                         name={item.name}
                         img={item.img}
-                        date={item.date}
                         status={item.status}
                         bringing={item.bringing}
                     />
