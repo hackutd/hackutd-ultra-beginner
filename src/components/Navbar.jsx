@@ -9,7 +9,7 @@ function Navbar() {
             {/* Main navbar container */}
             <div className="mx-auto flex flex-row items-center justify-between px-20 py-4 bg-pastelblue">
                 {/* TITLE */}
-                <Link to="/" className="poppins-bold text-3xl text-darkgreen hover:text-pastelgreen transition duration-300">Ripple & Refresh</Link>
+                <Link to="/home" className="poppins-bold text-3xl text-darkgreen hover:text-pastelgreen transition duration-300">Ripple & Refresh</Link>
                 
                 {/* PAGES */}
                 <div className="poppins-semibold flex gap-8 py-2 text-2xl">
