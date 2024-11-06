@@ -22,7 +22,7 @@ const MapPage = () => {
                 {/* Navbar */}
 
                 {/* TITLE */}
-                <h1 className="poppins-bold flex-row text-2xl">Map Page</h1>
+                <h1 className="poppins-bold flex-row text-2xl">Where we at?</h1>
                 <hr className="mb-4 mt-2 w-1/3 border-black" />
 
                 {/* Glow Effects */}
