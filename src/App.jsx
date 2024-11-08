@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import FeaturedItem from './components/FeaturedItem';
 import Dashboard from './components/Dashboard';
 import ActivityPage from './pages/ActivityPage';
-import RSVPPage from './pages/RSVPPage';
 import MapPage from './pages/MapPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -33,7 +32,6 @@ function App() {
                         } 
                     />
                     <Route path="/map" element={<PrivateRoute><MapPage /></PrivateRoute>} />
-                    <Route path="/rsvp" element={<PrivateRoute><RSVPPage /></PrivateRoute>} />
                     <Route path="/activity" element={<PrivateRoute><ActivityPage /></PrivateRoute>} />
                     
                     {/* Public Routes */}

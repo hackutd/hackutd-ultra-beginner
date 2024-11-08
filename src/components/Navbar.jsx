@@ -16,9 +16,6 @@ function Navbar() {
                     <Link to="/map" className="text-darkblue hover:text-pastelgreen transition duration-300">
                         map
                     </Link>
-                    <Link to="/rsvp" className="text-darkblue hover:text-pastelgreen transition duration-300">
-                        rsvp
-                    </Link>
                     <Link to="/activity" className="text-darkblue hover:text-pastelgreen transition duration-300">
                         activity
                     </Link>
