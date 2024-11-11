@@ -10,7 +10,7 @@ const MapPage = () => {
     };
 
     const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: "AIzaSyCpJWCanaBIY1jqmEdyOSoWQVwaIVADjrw",
+        googleMapsApiKey: "GOOGLE_API_KEY",
     });
 
     if (!isLoaded) return <div>Loading...</div>;
