@@ -72,47 +72,44 @@ function VoteComponent() {
             {
                 label: 'Votes',
                 data: [votes.activity1, votes.activity2, votes.activity3],
-                backgroundColor: ['rgba(75,192,192,0.4)', 'rgba(153,102,255,0.4)', 'rgba(255,159,64,0.4)'],
-                borderColor: ['rgba(75,192,192,1)', 'rgba(153,102,255,1)', 'rgba(255,159,64,1)'],
-                borderWidth: 1,
             },
         ],
     };
 
     return (
-        <div className="bg-white rounded-lg p-4 shadow-md">
-            <h2 className="text-lg font-bold mb-2">Vote for an Activity</h2>
+        <div className="">
+            <h2 className="mb-2">Vote for an Activity</h2>
             <div className="flex gap-2 mb-4">
                 <button
                     onClick={() => handleVote('activity1')}
                     disabled={!user}
-                    className={`py-2 px-4 rounded-md font-semibold transition duration-200 transform ${
-                        userVote === 'activity1' ? 'bg-pastelblue text-white' : 'bg-pastelgreen text-darkgreen hover:bg-darkgreen hover:text-white'
-                    } ${!user ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
+                    className={`py-2 px-4 ${
+                        userVote === 'activity1' ? '' : ''
+                    } ${!user ? '' : ''}`}
                 >
                     Activity 1
                 </button>
                 <button
                     onClick={() => handleVote('activity2')}
                     disabled={!user}
-                    className={`py-2 px-4 rounded-md font-semibold transition duration-200 transform ${
-                        userVote === 'activity2' ? 'bg-pastelblue text-white' : 'bg-pastelgreen text-darkgreen hover:bg-darkgreen hover:text-white'
-                    } ${!user ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
+                    className={`py-2 px-4 ${
+                        userVote === 'activity2' ? '' : ''
+                    } ${!user ? '' : ''}`}
                 >
                     Activity 2
                 </button>
                 <button
                     onClick={() => handleVote('activity3')}
                     disabled={!user}
-                    className={`py-2 px-4 rounded-md font-semibold transition duration-200 transform ${
-                        userVote === 'activity3' ? 'bg-pastelblue text-white' : 'bg-pastelgreen text-darkgreen hover:bg-darkgreen hover:text-white'
-                    } ${!user ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
+                    className={`py-2 px-4 ${
+                        userVote === 'activity3' ? '' : ''
+                    } ${!user ? '' : ''}`}
                 >
                     Activity 3
                 </button>
             </div>
             <Bar data={data} />
-            {userVote && <p className="mt-2 text-darkblue">You have voted for {userVote.replace('activity', 'Activity ')}.</p>}
+            {userVote && <p className="mt-2">You have voted for {userVote.replace('activity', 'Activity ')}.</p>}
         </div>
     );
 }

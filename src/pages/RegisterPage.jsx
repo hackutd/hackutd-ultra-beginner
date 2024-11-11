@@ -20,19 +20,19 @@ function RegisterPage() {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen bg-pastelblue">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
-                <h2 className="text-2xl font-semibold text-darkgreen mb-6">Register</h2>
+        <div className="flex justify-center items-center h-screen">
+            <div className="p-8 w-full sm:w-96">
+                <h2 className="mb-6">Register</h2>
 
-                {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+                {error && <p className="mb-4">{error}</p>}
                 
                 <form onSubmit={handleRegister}>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-darkblue">Email</label>
+                        <label htmlFor="email" className="block">Email</label>
                         <input
                             type="email"
                             id="email"
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pastelgreen"
+                            className="mt-1 block w-full px-4 py-2"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -40,24 +40,24 @@ function RegisterPage() {
                     </div>
 
                     <div className="mb-4">
-                        <label htmlFor="password" className="block text-sm font-medium text-darkblue">Password</label>
+                        <label htmlFor="password" className="block">Password</label>
                         <input
                             type="password"
                             id="password"
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pastelgreen"
+                            className="mt-1 block w-full px-4 py-2"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
 
-                    <button type="submit" className="w-full py-2 bg-darkgreen text-white rounded-md hover:bg-darkblue transition duration-300">Register</button>
+                    <button type="submit" className="w-full py-2">Register</button>
                 </form>
 
                 <div className="mt-4 text-center">
-                    <p className="text-sm text-darkblue">
+                    <p className="">
                         Already have an account?{' '}
-                        <Link to="/login" className="text-pastelgreen hover:underline">Login here</Link>
+                        <Link to="/login" className="">Login here</Link>
                     </p>
                 </div>
             </div>

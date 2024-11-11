@@ -7,7 +7,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  YOUR STUFF HERE
+  apiKey: "AIzaSyBCbR78em9ht-AI_tlia9t7YauZr3ei-3w",
+  authDomain: "ultra-beginner.firebaseapp.com",
+  projectId: "ultra-beginner",
+  storageBucket: "ultra-beginner.appspot.com",
+  messagingSenderId: "301389393222",
+  appId: "1:301389393222:web:e37c68d575a48d5fefc947"
 };
 
 // Initialize Firebase

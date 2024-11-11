@@ -51,20 +51,20 @@ function WeatherComponent() {
     };
 
     return (
-        <div className="bg-white rounded-lg p-4 shadow-md">
-            <h2 className="text-lg font-bold mb-2">Weather Forecast</h2>
+        <div className="p-4">
+            <h2 className="mb-2">Weather Forecast</h2>
             <label className="block mb-2">
                 We are planning on:
                 <input 
                     type="date" 
                     value={date} 
                     onChange={handleDateChange} 
-                    className="border rounded p-2 w-full mt-1 mb-3"
+                    className="p-2 w-full mt-1 mb-3"
                 />
             </label>
             <button 
                 onClick={handleDateUpdate} 
-                className="bg-pastelblue hover:bg-darkblue text-white font-semibold py-2 px-4 rounded-md transition duration-200 ease-in-out transform hover:scale-105 mb-4"
+                className="py-2 px-4 mb-4"
             >
                 Update Date
             </button>

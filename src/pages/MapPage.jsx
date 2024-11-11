@@ -10,7 +10,7 @@ const MapPage = () => {
     };
 
     const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: "AIzaSyCpJWCanaBIY1jqmEdyOSoWQVwaIVADjrw",
+        googleMapsApiKey: "GOOGLE_API_KEY",
     });
 
     if (!isLoaded) return <div>Loading...</div>;
@@ -22,16 +22,12 @@ const MapPage = () => {
                 {/* Navbar */}
 
                 {/* TITLE */}
-                <h1 className="poppins-bold flex-row text-2xl">Where we at?</h1>
-                <hr className="mb-4 mt-2 w-1/3 border-black" />
-
-                {/* Glow Effects */}
-                <div className="absolute top-20 left-10 h-32 w-32 animate-pulse rounded-full bg-pastelgreen opacity-50 blur-lg"></div>
-                <div className="absolute bottom-20 right-20 h-40 w-40 animate-pulse rounded-full bg-pastelblue opacity-50 blur-lg"></div>
+                <h1 className="flex-row">Where we at?</h1>
+                <hr className="mb-4 mt-2 w-1/3" />
 
                 {/* Map Section */}
-                <div className="relative z-10 bg-pastelblue shadow-lg rounded-lg p-6 w-full max-w-lg">
-                    <div className="rounded-lg overflow-hidden">
+                <div className="relative z-10 p-6 w-full max-w-lg">
+                    <div className="overflow-hidden">
                         <GoogleMap
                             mapContainerStyle={mapStyles}
                             zoom={10}
