@@ -1,9 +1,10 @@
 import React from 'react';
+import ChatBot from '../components/ChatBot';
 
 function ActivityPage() {
     return (
         <div>
-            <h1>Activity Page</h1>
+            <ChatBot systemPrompt="You are a helpful assistant." />
         </div>
     );
 }
